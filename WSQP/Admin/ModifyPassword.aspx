@@ -20,7 +20,8 @@
                     url: "../LoginAjax.ashx",
                     data: {
                         name: strName,
-                        password:$(inObj).val()
+                        password: $(inObj).val().trim(),
+                        flag:1
                     },
                     dataType: "text",
                     success: function (data) {
@@ -33,6 +34,16 @@
                         }
                     }
                 });
+            }
+        }
+
+        function confirmPassword()
+        {
+            var password = $("#newPassword").val();
+            var cPassword = $("#confirmPassword").val();
+            if (password != cPassword)
+            {
+                $("#error3").html("两次输入的密码不一致!");
             }
         }
     </script>
@@ -53,8 +64,8 @@
      <div class="control-group">
           <label class="control-label" for="confirmPassword">确认新密码:</label>
           <div class="controls">
-              <input type="password" id="confirmPassword"  placeholder="确认新密码" />
-               <span class="help-inline"></span>
+              <input type="password" id="confirmPassword"  placeholder="确认新密码" name="cpassword" onblur="confirmPassword()"/>
+               <span class="help-inline" id="error3"></span>
           </div>
     </div> 
      <div class="control-group">
