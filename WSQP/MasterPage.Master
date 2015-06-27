@@ -1,0 +1,110 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="WSQP.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="|万顺汽配|成都万顺汽配|四川万顺汽配|四川华菱|四川格尔发|江淮|离合器|黄石好斯基离合器|三环离合器|离合器|前面罩|堵板|大灯|华菱|格尔发|江淮|重卡|上车踏板|前盖板|保险杠|室内顶灯|大灯|尾灯|雾灯|传化物流|挡泥板|示高灯|踏板下饰板|踏板护板|踏板护板|踏板衬板|天旭汽配城|万欢|阮景|雾灯|雾灯总成|轮弧饰板|转向灯|万方禄" />
+    <meta name="description" content="|万顺汽配|成都万顺汽配|四川万顺汽配|四川华菱|四川格尔发|江淮|离合器|黄石好斯基离合器|三环离合器|离合器|前面罩|堵板|大灯|华菱|格尔发|江淮|重卡|上车踏板|前盖板|保险杠|室内顶灯|大灯|尾灯|雾灯|传化物流|挡泥板|示高灯|踏板下饰板|踏板护板|踏板护板|踏板衬板|天旭汽配城|万欢|阮景|雾灯|雾灯总成|轮弧饰板|转向灯|万方禄" />
+    <title>万顺汽配产品列表 | 成都市万顺汽配有限公司(主营华菱、江淮重卡全车件黄石三环、黄石好斯基离合器片、离合器压盘、浙江紫阳机械扭力胶芯等汽车配件)</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <script src="js/jquery-1.7.1.js"></script>
+    <script src="js/submenu.js"></script>
+    <link href="css/lrtk.css" rel="stylesheet" />
+    <script src="js/cs_q.js"></script>
+    <script src="js/Search.js"></script>
+    <script src="js/OnlineService.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="qq_icon"></div>
+    <div id="cs_online">
+        <ul class='qq_context'>
+            <li>
+                <span class='span_t'>万顺汽配：</span>
+                <span class='qq_num'></span>
+            </li>
+            <li>
+                <span class='span_t'>销售代表：</span>
+                <span class='qq_num'></span>
+            </li>
+            <li>
+                <span class='span_t'>采购总管 :</span>
+                <span class='qq_num'></span>
+            </li>
+            <li>
+                <span class='span_t'>销售代表：</span>
+                <span class='qq_num'></span>
+            </li>
+            <li>
+                <span class='span_t'>售后咨询：</span>
+                <span class='qq_num'></span>
+            </li>
+        </ul>
+    </div>
+    <div id="header">
+        <div class="logo"> <img src="img/qrcode_for_wsqp.jpg"  width="100" height="100" style="margin-left:370px"/>
+        </div> 
+        <div class="search">
+            <p>
+                <a href="index.aspx">返回首页</a>  | <a href="mailto:wanfenglu@21cn.com">企业邮箱</a>  |    
+                <a><span style="cursor: pointer" onclick="window.external.addFavorite('http://wsqp.com.cn')" title="万顺汽配有限公司">收藏本站</span></a>
+            </p>
+            <input type="text" class="text" />
+            <input type="button" class="btn" onclick="search()" />
+        </div>
+    </div>
+    <ul id="nav">
+        <li class="current"></li>
+        <li><a href="Index.aspx">首页</a></li>
+        <li class="mainlevel"><a href="company.aspx">公司概况</a>
+            <ul class="subtab">
+                <li><a href="company.aspx">公司简介</a></li>
+                <li><a href="ourstore.aspx">公司门店</a></li>
+                <li><a href="wstp.aspx">资质认证</a></li>
+            </ul>
+        </li>
+        <li class="mainlevel"><a href="NewsHead.aspx">新闻动态</a>
+            <ul class="subtab">
+                <li><a href="Newshead.aspx">公司新闻</a></li>
+                <li><a href="Newshead.aspx?catid=2">行业新闻</a></li>
+                <li><a href="Newshead.aspx?catid=3">展会报道</a></li>
+            </ul>
+        </li>
+        <li class="mainlevel"><a href="Brand.aspx">品牌中心</a>
+            <ul class="subtab">
+                <li><a href="brand.aspx">华菱重卡</a></li>
+                <li><a href="brand.aspx">江淮重卡</a></li>
+                <li><a href="brand.aspx">离合器</a></li>
+            </ul>
+        </li>
+        <li class="mainlevel"><a href="Products.aspx">产品列表</a>
+            <ul class="subtab">
+                <li><a href="Products.aspx?cid=4">华菱全车件</a></li>
+                <li><a href="Products.aspx?cid=3">江淮全车件</a></li>
+                <li><a href="Products.aspx?cid=1">离合器</a></li>
+            </ul>
+        </li>
+        <li class="last"><a href="contact.aspx">联系我们</a></li>
+    </ul>
+    <div id="detail_ban">
+        <img src="img/middle.jpg" width="960" height="195" />
+    </div>
+    <div id="list_con">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div class="footer">
+        <div class="copyright">
+            <p>
+                Copyright&copy; 2010-2015 成都市万顺汽配有限公司
+                All Rights  Reserved        电话：028-67335998
+            </p>
+            <p>公司地址:成都市新都区传化物流基地天旭汽配城Z-118、120、122、124号</p>
+            <p><a href="http://www.028icp.com/" target="_blank">蜀ICP备13022708号</a></p>
+        </div>
+    </div>
+</body>
+</html>

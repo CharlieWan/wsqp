@@ -1,0 +1,220 @@
+﻿       html {
+            color: #434343;
+            background-color: #fff;
+        }
+
+        .clearfix:after {
+            content: ".";
+            clear: both;
+            display: block;
+            height: 0;
+            visibility: hidden;
+            overflow: hidden;
+        }
+
+        .clearfix {
+            display: inline-table;
+        }
+
+        * html .clearfix {
+            height: 1%;
+        }
+
+        .clearfix {
+            display: block;
+        }
+
+        * + html .clearfix {
+            min-height: 1%;
+        }
+
+        .f_l {
+            float: left;
+        }
+
+        .f_r {
+            float: right;
+        }
+
+        .width785 {
+            width: 785px;
+            margin-top: 10px;
+        }
+
+        .width165 {
+            width: 165px;
+            margin-top: 10px;
+        }
+
+        .cgtop_focus {
+            position: relative;
+            height: 314px;
+            z-index: 2;
+            margin-bottom: 10px;
+        }
+
+        .my_category_c {
+            height: 264px;
+        }
+
+        .my_left_category {
+            width: 258px;
+            border: 1px solid #bfbfbf;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 9999;
+        }
+
+            .my_left_category h2 {
+                background: repeat-x left top;
+                height: 26px;
+                line-height: 26px;
+                font-size: 12px;
+                color: #c30;
+                padding-left: 5px;
+            }
+
+                .my_left_category h2 a {
+                    color: #c30;
+                }
+
+                    .my_left_category h2 a:hover {
+                        text-decoration: underline;
+                    }
+
+            .my_left_category .h2_cat {
+                width: 257px;
+                line-height: 21px;
+                background-image: none;
+                background-repeat: no-repeat;
+                position: relative;
+                border-bottom: 1px solid #e5e5e5;
+            }
+
+            .my_left_category a {
+                text-decoration: none;
+                display: block;
+            }
+
+                .my_left_category a:hover {
+                    text-decoration: none;
+                }
+
+            .my_left_category h3 {
+                height: 21px;
+                font-size: 12px;
+                font-weight: normal;
+            }
+
+                .my_left_category h3 a {
+                    line-height: 21px;
+                    display: block;
+                    padding-left: 8px;
+                    width: 230px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    -o-text-overflow: ellipsis;
+                }
+
+            .my_left_category .h3_cat {
+                display: none;
+                width: 236px;
+                position: absolute;
+                left: 243px;
+                margin-top: -22px;
+                cursor: auto;
+            }
+
+            .my_left_category .shadow {
+                position: inherit;
+                background: left top;
+                width: 236px;
+            }
+
+            .my_left_category .shadow_border {
+                position: inherit;
+                width: 232px;
+                border: 1px solid #959595;
+                margin-top: 1px;
+                border-left-width: 0px;
+                background: no-repeat 0px 19px;
+                background-color: #ffffff;
+                margin-bottom: 3px;
+            }
+
+                .my_left_category .shadow_border ul li {
+                }
+
+                    .my_left_category .shadow_border ul li a {
+                        padding-left: 5px;
+                        height: 22px;
+                        line-height: 22px;
+                        overflow: hidden;
+                        margin-left: 1px;
+                    }
+
+                        .my_left_category .shadow_border ul li a:hover {
+                            background-color: #eee;
+                        }
+
+            .my_left_category .active_cat {
+                z-index: 99;
+                background-position: 0 -26px;
+                cursor: pointer;
+            }
+
+                .my_left_category .active_cat h3 {
+                    color: #f30;
+                    background: no-repeat 168px center;
+                }
+
+                    .my_left_category .active_cat h3 a {
+                        color: #f30;
+                        width: 230px;
+                        overflow: hidden;
+                        height: 21px;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        -o-text-overflow: ellipsis;
+                    }
+
+                .my_left_category .active_cat div {
+                    display: block;
+                }
+
+        .morecate {
+            background: #ede5f0 no-repeat center center;
+            height: 22px;
+            line-height: 22px;
+        }
+
+            .morecate a {
+                display: block;
+                height: 22px;
+                line-height: 22px;
+                cursor: pointer;
+            }
+
+        #catebox {
+            z-index: 9999;
+        }
+
+        #cgbox {
+            background-color: #fff;
+        }
+
+        #cg_Box {
+            position: relative;
+            z-index: 1;
+        }
+
+        .sub_promotion {
+            overflow: hidden;
+            width: 513px;
+            height: 312px;
+            border: 1px solid #bfbfbf;
+            position: relative;
+            background: #f0f0f0 repeat-x left top;
+        }

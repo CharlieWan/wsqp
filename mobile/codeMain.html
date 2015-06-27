@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>首页 | 成都市万顺汽配有限公司官方网站</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"> </script>
+    <link href="css/grid-listview.css" rel="stylesheet" />
+    <script type="text/javascript">
+        var u = navigator.userAgent, app = navigator.appVersion;
+        alert(u+" "+app);
+        $(document).ready(function () {
+            var u = navigator.userAgent, app = navigator.appVersion;
+            // alert(u.match("/Android/")||);
+            if (u.match("/Android/") || u.match("/IPhone/") || u.match("/IPad/")) {
+                // alert(navigator.userAgent);
+                window.location.href = "codeMain.html";
+                //return false;
+            }
+            else
+            {
+                //window.location.href = "codeMain.html";
+            }
+        });
+
+
+
+        //function getuseragent() {
+        //    var browser = {
+        //        versions: function () {
+        //            var u = navigator.userAgent, app = navigator.appVersion;
+        //            return {//移动终端浏览器版本信息 
+        //                trident: u.indexOf('Trident') > -1, //IE内核
+        //                presto: u.indexOf('Presto') > -1, //opera内核
+        //                webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+        //                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+        //                mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/), //是否为移动终端
+        //                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+        //                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+        //                iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器
+        //                iPad: u.indexOf('iPad') > -1, //是否iPad
+        //                webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+        //            };
+        //        }(),
+        //        language: (navigator.browserLanguage || navigator.language).toLowerCase()
+        //    }
+        //    document.writeln("语言版本: " + browser.language);
+        //    document.writeln(" 是否为移动终端: " + browser.versions.mobile);
+        //    document.writeln(" ios终端: " + browser.versions.ios);
+        //    document.writeln(" android终端: " + browser.versions.android);
+        //    document.writeln(" 是否为iPhone: " + browser.versions.iPhone);
+        //    document.writeln(" 是否iPad: " + browser.versions.iPad);
+        //    document.writeln(navigator.userAgent);
+        //};
+
+        //function isMobileAgent() {
+        //    var u = navigator.userAgent;
+        //    return !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/); //是否为移动终端
+        //}
+
+        //function GetPhoto(aObj) {
+        //    var id = $(aObj).attr("id");
+        //    $("#list").html(" ");
+        //    $.ajax({
+        //        url: "GetPhoto.ashx",
+        //        type: "post",
+        //        data: "id=" + id,
+        //        success: function (data) {
+        //            $("#list").append(data);
+        //            window.location = "#pagelist";
+        //            ShowBigPic();
+        //        }
+        //    });
+        //}
+
+        //function ShowBigPic() {
+        //    $(".pics").on("click", function () {
+        //        var target = $(this),
+        //            brand = target.find("h2").html(),
+        //            model = target.find("p").html(),
+        //            short_old = target.attr("id"),
+        //            short = short_old.substr(0, short_old.length - 4);
+        //        closebtn = '<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-btn-right">Close</a>',
+        //        header = '<div data-role="header"><h2>' + brand + ' ' + model + '</h2></div>',
+        //        img = '<img src="images/' + short_old + '"  alt="' + brand + '" class="photo">',
+        //        popup = '<div data-role="popup" id="popup-' + short + '" data-short="' + short + '" data-theme="none" data-overlay-theme="a" data-corners="false" data-tolerance="15">' + closebtn + header + img + '</div>';
+
+        //        $.mobile.activePage.append(popup).trigger("pagecreate");
+
+        //        $(".photo", "#popup-" + short).load(function () {
+        //            var height = $(this).height(),
+        //                width = $(this).width();
+
+        //            $(this).attr({ "height": height, "width": width });
+
+        //            $("#popup-" + short).popup("open");
+
+        //            clearTimeout(fallback);
+        //        });
+
+        //        var fallback = setTimeout(function () {
+        //            $("#popup-" + short).popup("open");
+        //        }, 2000);
+        //    });
+
+        //    $(document).on("popupbeforeposition", ".ui-popup", function () {
+
+        //        var maxHeight = $(window).height() - 68 + "px";
+        //        $("img.photo", this).css("max-height", maxHeight);
+        //    });
+
+        //    $(document).on("popupafterclose", ".ui-popup", function () {
+        //        $(this).remove();
+        //    });
+        //}
+    </script>
+</head>
+<body>
+    <div data-role="page" id="pagelist">
+        <div data-role="header">
+            <h1>成都市万顺汽配</h1>
+        </div>
+        <div data-role="content">
+            <div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-inset="false">
+                <div data-role="collapsible">
+                    <h2>产品中心</h2>
+                    <ul data-role="listview">
+                        <li><a href="html/hl.html">华菱 <span class="ui-li-count">12</span></a></li>
+                        <li><a href="html/jac.html">江淮<span class="ui-li-count">0</span></a></li>
+                        <li><a href="html/lhq1.html">三环<span class="ui-li-count">4</span></a></li>
+                        <li><a href="html/jgj.html">紧固件 <span class="ui-li-count">328</span></a></li>
+                        <li><a href="html/jt.html">管类接头 <span class="ui-li-count">62</span></a></li>
+                        <li><a href="html/ys.html">雨刮 <span class="ui-li-count">62</span></a></li>
+                        <li><a href="html/nljx.html">平衡胶套 <span class="ui-li-count">62</span></a></li>
+                        <li><a href="html/qt.html">其他 <span class="ui-li-count">62</span></a></li>
+                        <li><a href="html/lhq2.html">好斯基 <span class="ui-li-count">62</span></a></li>
+                    </ul>
+                </div>
+                <div data-role="collapsible">
+                    <h2>新闻中心</h2>
+                    <ul data-role="listview" data-theme="d" data-divider-theme="d" id="news">
+                        <li><a href="news.html">公司新闻 <span class="ui-li-count">12</span></a></li>
+                        <li><a href="news.html">行业新闻 <span class="ui-li-count">20</span></a></li>
+                        <li><a href="news.html">展会报道 <span class="ui-li-count">30</span></a></li>
+                    </ul>
+                </div>
+                <div data-role="collapsible">
+                    <h2>品牌中心</h2>
+                    <ul data-role="listview" data-theme="d" data-divider-theme="d">
+                        <li data-role="list-divider">华菱</li>
+                        <li>
+                            <h2></h2>
+                        </li>
+                        <li data-role="list-divider">三环</li>
+                        <li>
+                            <h2></h2>
+                        </li>
+                        <li data-role="list-divider">好斯基</li>
+                        <li>
+                            <h4></h4>
+                            <h4></h4>
+                        </li>
+                        <li data-role="list-divider">浙江紫阳</li>
+                        <li>
+                            <h4></h4>
+                            <h4></h4>
+                        </li>
+                        <li data-role="list-divider">邮箱</li>
+                        <li>
+                            <h4>邮箱 :<a href="mailto:wanfenglu@21cn.com">wanfenglu@21cn.com</a></h4>
+                            <h4>官方QQ:1586553115 </h4>
+                        </li>
+                    </ul>
+                </div>
+                <div data-role="collapsible">
+                    <h2>关于我们</h2>
+                    <ul data-role="listview" data-theme="d" data-divider-theme="d">
+                        <li><a href="company.html">
+                            <span>关于我们</span>
+                        </a>
+                        </li>
+                        <li><a href="contact.html">
+                            <span>联系我们</span>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer">
+            <h4>Copyright&copy;2010-2014 All Rights  Reserved </h4>
+            <h4>成都市万顺汽配有限公司</h4>
+        </div>
+    </div>
+</body>
+</html>
