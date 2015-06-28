@@ -15,6 +15,9 @@ namespace WSQP.Admin
             {
                 string strName = Session["uinfo"].ToString();
                 string newPassword = Request.Form["cPassword"];
+                int flag=Convert.ToInt32(Request.Form["flag"]);
+                if(flag==1)
+                { 
                 if (new BLL.User().ModifyPassword(strName, newPassword))
                 {
                     Response.Write("<script>msgObj.ShowMsgInfo('密码修改成功!');</script>");
@@ -22,6 +25,7 @@ namespace WSQP.Admin
                 else
                 {
                     Response.Write("<script>msgObj.ShowMsgInfo('内部错误!');</script>");
+                }
                 }
             }
         }
