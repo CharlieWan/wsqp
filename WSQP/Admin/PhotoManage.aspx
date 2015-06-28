@@ -2,7 +2,14 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <link href="../css/jquery.lightbox-0.5.css" rel="stylesheet" />
-    <script src="../js/jquery.lightbox-0.5.js"></script>
+ <%--   <link href="../css/style.css" rel="stylesheet" />--%>
+    <style type="text/css">
+        #imgList  li img{
+        width:150px;
+        height:100px;
+        border:1px solid #000000;
+        }
+    </style>
     <script type="text/javascript">
         $(document).ready(function () {
             change();
@@ -83,10 +90,10 @@
                             <%=cateHtml %>
                         </select>
             </td>
-            <td>进入产品<a href="../Products.aspx">前台</a>页面</td>
         </tr>
     </table>
     <ul id="imgList">
-    </ul>
+    </ul>  
+<script src="../js/jquery.lightbox-0.5.js"></script>
 </asp:Content>
 
