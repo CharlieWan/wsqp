@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/hmasterPage.Master" AutoEventWireup="true" CodeBehind="ModifyPassword.aspx.cs" Inherits="WSQP.Admin.ModifyPassword" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <script >
-        var canSubmit=$("#flag").val();
         function  checkPassword(inObj)
         {
             var strName = $(inObj).attr("strname");
@@ -34,6 +33,7 @@
             }
         }
 
+        //检验密码长度是否ok
         function CheckPasswordLength()
         {
             var newP = $("#newPassword").val();
@@ -45,21 +45,48 @@
                 if (newP.length < 6 || newP.length > 10) {
                     $("#error2").html("密码长度需为6到10之间的字母与数字组合!");
                 }
-                else {
-                    canSubmit = 1;
-                }
             }
         }
 
+        var newP;
+        //校验两次密码输入的是相同的
         function confirmPasswordIsSame()
         {
             var password = $("#newPassword").val();
             var cPassword = $("#confirmPassword").val();
             if (password != cPassword) {
                 $("#error3").html("两次输入的密码不一致!");
+                return false;
             }
             else {
-                canSubmit = 1;
+                newP = cPassword;
+                return true;
+            }
+        }
+        
+        //提交修改到后台处理
+        function submitModifyPass()
+        {
+            if (confirmPasswordIsSame()) {
+                $.ajax({
+                    type: "post",
+                    data: {
+                        newPassword: newP
+                    },
+                    url: "SubmitModifyPassword.ashx",
+                    success: function (data) {
+                        if (data == "OK") {
+                            alert("修改成功！");
+                            windows.location.href = "~/index.aspx";
+                        }
+                        else {
+                            alert("失败,请检查！");
+                        }
+                    }
+                });
+            }
+            else {
+                alert("密码不一致！");
             }
         }
     </script>
@@ -87,7 +114,7 @@
      <div class="control-group">
           <div class="controls">
               <input type="hidden"  name="flag" id="flag" value="0"/>
-            <button type="submit" class="btn">确定</button>
+            <button type="button" class="btn" onclick="submitModifyPass()">确定</button>
           </div>
     </div> 
 </asp:Content>

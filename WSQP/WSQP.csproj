@@ -1428,6 +1428,9 @@
     <Compile Include="Admin\ResetPassword.aspx.designer.cs">
       <DependentUpon>ResetPassword.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\SubmitModifyPassword.ashx.cs">
+      <DependentUpon>SubmitModifyPassword.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\UploadHandler.ashx.cs">
       <DependentUpon>UploadHandler.ashx</DependentUpon>
     </Compile>
@@ -1786,6 +1789,7 @@
     <Content Include="Admin\lib\jqplot\examples\resizablePlot.php.orig" />
     <Content Include="Admin\lib\jqplot\examples\syntaxhighlighter\LGPL-LICENSE" />
     <Content Include="Admin\lib\jqplot\examples\syntaxhighlighter\MIT-LICENSE" />
+    <Content Include="Admin\SubmitModifyPassword.ashx" />
     <None Include="Properties\PublishProfiles\05032015.pubxml" />
     <None Include="Properties\PublishProfiles\20150421.pubxml" />
     <None Include="web.Debug.config">
